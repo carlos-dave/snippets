@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WUC Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form  POST="https://api.getmati.com/v2/identities/{{_id}}/send-input" >  
+  <div class="form-group row">
+    <label class="col-4">Owned/Leased</label> 
+    <div class="col-8">
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="type" id="type_0" type="checkbox" class="custom-control-input" value="landlord" required="required" checked="checked"> 
+        <label for="type_0" class="custom-control-label">Landlord</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input name="type" id="type_1" type="checkbox" class="custom-control-input" value="tenant" required="required"> 
+        <label for="type_1" class="custom-control-label">Tenant</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="plotnum" class="col-4 col-form-label">Plot Number</label> 
+    <div class="col-8">
+      <input id="plotnum" name="plotnum" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="location" class="col-4 col-form-label">City/Town/Village</label> 
+    <div class="col-8">
+      <select id="location" name="location" class="custom-select" required="required" multiple="multiple"></select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="mobnum" class="col-4 col-form-label">Mobile Number</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">+267</div>
+        </div> 
+        <input id="mobnum" name="mobnum" type="number" class="form-control" required="required" min ="71000000"max="79999999">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="email" class="col-4 col-form-label">email Address</label> 
+    <div class="col-8">
+      <input id="email" name="email" placeholder="someone@domain.com" type="email" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="nextofkin" class="col-4 col-form-label">Next of Kin</label> 
+    <div class="col-8">
+      <input id="nextofkin" name="nextofkin" type="text" class="form-control" required="required">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="kintelnum" class="col-4 col-form-label">Tel Number</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">+267</div>
+        </div> 
+        <input id="kintelnum" name="kintelnum" type="number" class="form-control" required="required" 
+/>
+      </div>
+    </div>
+  </div> 
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
